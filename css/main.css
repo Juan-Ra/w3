@@ -1,0 +1,309 @@
+:root{
+  /* colores */
+  --mainColor: #e5bb3d;
+  --darkColor: rgb(100, 126, 153);
+  --darkColorTr:  rgba(100, 126, 153, .95);
+
+  --gradient1:  rgba(55, 79, 105, 0.95);
+  --gradient2:  rgba(100, 126, 153, .95);
+
+  --grisClaro: #f8f8f8;
+  --grisMedio: #929292;
+  --grisOscuro: #474747;
+  --grisNegro:  #111722;
+
+  /* tipografia */
+  --txt-small: .9rem;
+  --txt-big: 1.5rem;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* //////////////// BOTON //////////////// */
+
+.btn-outline-main{
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-color:var(--mainColor);
+  padding: .5rem 2rem;
+
+}
+
+.btn-outline-main:hover{
+  color: white;
+  background: var(--mainColor) !important;
+}
+
+.acerca .btn-outline-main, .contacto .btn-outline-main{
+  color: var(--grisOscuro);
+}
+.acerca .btn-outline-main:hover, .contacto .btn-outline-main:hover{
+  color: white;
+  background: var(--mainColor);
+}
+
+/* //////////////// SECCION GENERICA //////////////// */
+
+.section {
+  padding: 6em 0;
+  
+}
+
+.section-header{
+  text-align: center;
+  
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: var(--txt-small);
+  font-weight: bold;
+  color: var(--grisOscuro);
+}
+.section-coment {
+  font-size: var(--txt-big);
+  color: var(--grisMedio);
+}
+
+/* //////////////// FORMULARIOS //////////////// */
+
+.input{
+  padding-left:1rem;
+  border: none;
+}
+.textarea {
+  border:none;
+  border-radius: 1rem 1rem  0 1rem !important;
+}
+
+/* //////////////// OVERLAY //////////////// */
+.overlay {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: .5s;
+}
+.overlay-bg{
+  background: -moz-linear-gradient(left,  var(--gradient1) 0%, var(--gradient2) 100%);
+  background: -webkit-linear-gradient(left,  var(--gradient1) 0%, var(--gradient2) 100%);
+  background: linear-gradient(to right, var(--gradient1) 0%, var(--gradient2) 100%);
+}
+
+/* //////////////// LINEA DIVISORIA //////////////// */
+
+.line {
+  margin: 10px 0 25px 0;
+  width: 50%;
+  height: 1px;
+  background: var(--mainColor);
+}
+
+
+/* //////////////// HEADER //////////////// */
+.main-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: .5s;
+}
+
+.logo{
+  width: 150px;
+  transition: .5s;
+}
+
+.small-logo{
+  width: 110px;
+}
+
+.main-header.scroll-sticky{
+  position: fixed;
+  background: var(--darkColorTr);
+}
+
+.main-header .navbar-nav a{
+  font-size: var(--txt-small);
+  transition: .5s;
+}
+
+.main-header .navbar-nav a:hover{
+  color: var(--mainColor) !important;
+}
+
+.header-social {
+  padding-left: 5px;
+  margin-left: 5px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.header-social a {
+  margin: 0 5px;
+  padding: 0 5px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header-social a:hover {
+  color:var(--mainColor);
+}
+
+.navbar-toggler:focus{
+  border-color: var(--mainColor);
+}
+/* //////////////// FIN HEADER //////////////// */
+
+/* //////////////// HERO //////////////// */
+.hero {
+  position: relative;
+  /* background-image: url(../images/hero.jpg); */
+  background: url(../images/hero.jpg) no-repeat center center/cover;
+  /* background-size: cover; */
+  height: 90vh;
+}
+
+.jumbotron{
+  color: white;
+}
+.jumbotron p{
+  margin: 0;
+}
+
+.forma {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right: 0;
+  display: flex;
+  justify-content:stretch;
+}
+
+.rectangulo{
+  background:var(--grisClaro);
+  width: 100%;
+  height: 30px;
+}
+
+.triangulo{
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-bottom: 30px solid var(--grisClaro); 
+}
+
+.triangulo.left{
+    border-right: 30px solid transparent;
+}
+.triangulo.right{
+    border-left: 30px solid transparent;
+}
+
+/* //////////////// FIN HERO //////////////// */
+
+/* //////////////// ABOUT //////////////// */
+.acerca, .contacto {
+  background: var(--grisClaro);
+}
+
+.acerca .card-body{
+  padding: 2.5rem 1.5rem;
+  color: var(--grisOscuro);
+}
+
+.acerca .card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* //////////////// FIN ABOUT //////////////// */
+
+/* //////////////// SERVICES //////////////// */
+.services {
+  padding-bottom: 0;
+}
+
+.serviceImg {
+  padding: 0;
+  position: relative;
+}
+.serviceImg img{
+  width: 100%;
+}
+
+.serviceImg .overlay{
+  opacity: 0;
+}
+
+.serviceImg .overlay:hover {
+  opacity: 1;
+}
+
+/* //////////////// FIN SERVICES //////////////// */
+
+/* //////////////// CONTACTO //////////////// */
+.contacto .info {
+  margin:0;
+  color: var(--grisMedio);
+  font-size: var(--txt-small);
+}
+
+.contacto h3 {
+  font-size: var(--txt-small);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.direccion p, .telefono p{
+  margin: 0;
+}
+/* //////////////// FIN CONTACTO //////////////// */
+
+/* //////////////// FOOTER //////////////// */
+.mainFooter {
+  background-color: var(--grisNegro);
+}
+
+.mainFooter h3 {
+  font-size: var(--txt-small);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--grisClaro);
+}
+
+.mainFooter p {
+  font-size: var(--txt-small);
+  color: var(--grisMedio)
+}
+
+.mainFooter li{
+  list-style: none;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+.mainFooter li a{
+  color: var(--darkColor);
+  font-size: var(--txt-small);
+  text-decoration: none;
+}
+.mainFooter li a:hover{
+  color: var(--mainColor);
+}
+
+.footer-nav {
+  padding:0;
+  margin-right: 40px;
+}
+
+
+/* //////////////// FIN FOOTER //////////////// */
