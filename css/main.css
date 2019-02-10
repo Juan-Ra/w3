@@ -25,6 +25,13 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
+/* //////////////// CLASES UTIL //////////////// */
+
+.txt-sm{
+  font-size: var(--txt-small);
+}
+
+
 /* //////////////// BOTON //////////////// */
 
 .btn-outline-main{
@@ -58,7 +65,6 @@ body{
 
 .section-header{
   text-align: center;
-  
 }
 
 .section-title {
@@ -83,6 +89,22 @@ body{
   border-radius: 1rem 1rem  0 1rem !important;
 }
 
+/* //////////////// CARD //////////////// */
+
+.card-body{
+  padding: 2.5rem 1.5rem;
+  color: var(--grisOscuro);
+  text-align: center;
+  border-color: white;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
 /* //////////////// OVERLAY //////////////// */
 .overlay {
   width: 100%;
@@ -93,16 +115,35 @@ body{
   bottom: 0;
   transition: .5s;
 }
-.overlay-bg{
+.overlay-bg {
   background: -moz-linear-gradient(left,  var(--gradient1) 0%, var(--gradient2) 100%);
   background: -webkit-linear-gradient(left,  var(--gradient1) 0%, var(--gradient2) 100%);
   background: linear-gradient(to right, var(--gradient1) 0%, var(--gradient2) 100%);
 }
 
+/* //////////////// ICONOS REDES SOCIALES //////////////// */
+
+.social {
+  padding-left: 5px;
+  margin-left: 5px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.social a {
+  margin: 0 5px;
+  padding: 0 5px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.social a:hover {
+  color:var(--mainColor);
+}
+
 /* //////////////// LINEA DIVISORIA //////////////// */
 
 .line {
-  margin: 10px 0 25px 0;
+  margin-bottom: 15px;
   width: 50%;
   height: 1px;
   background: var(--mainColor);
@@ -139,23 +180,6 @@ body{
 
 .main-header .navbar-nav a:hover{
   color: var(--mainColor) !important;
-}
-
-.header-social {
-  padding-left: 5px;
-  margin-left: 5px;
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.header-social a {
-  margin: 0 5px;
-  padding: 0 5px;
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.header-social a:hover {
-  color:var(--mainColor);
 }
 
 .navbar-toggler:focus{
@@ -215,18 +239,20 @@ body{
   background: var(--grisClaro);
 }
 
-.acerca .card-body{
-  padding: 2.5rem 1.5rem;
-  color: var(--grisOscuro);
-}
-
-.acerca .card-title {
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 /* //////////////// FIN ABOUT //////////////// */
+
+/* //////////////// TEAM //////////////// */
+
+.team .overlay{
+  padding: 1rem;
+  text-align: center;
+  font-size: var(--txt-small);
+}
+.team .social {
+  border: none;
+}
+
+/* //////////////// FIN TEAM //////////////// */
 
 /* //////////////// SERVICES //////////////// */
 .services {
@@ -241,11 +267,11 @@ body{
   width: 100%;
 }
 
-.serviceImg .overlay{
+.serviceImg .overlay, .team .overlay{
   opacity: 0;
 }
 
-.serviceImg .overlay:hover {
+.serviceImg .overlay:hover, .team .overlay:hover {
   opacity: 1;
 }
 
