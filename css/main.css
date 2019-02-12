@@ -164,6 +164,7 @@ body{
 
 
 /* //////////////// HEADER //////////////// */
+
 .main-header {
   position: absolute;
   left: 0;
@@ -181,6 +182,12 @@ body{
   width: 110px;
 }
 
+
+#togglerButtonIcon{
+  font-size: 1.5rem;
+}
+
+
 .main-header.scroll-sticky, .main-header.bg-toggle{
   position: fixed;
   background: var(--darkColorTr);
@@ -197,10 +204,6 @@ body{
 
 .main-header .nav-link.active{
   color: var(--mainColor) !important;
-}
-
-.navbar-toggler:focus{
-  border-color: var(--mainColor);
 }
 
 /* //////////////// FIN HEADER //////////////// */
@@ -299,6 +302,7 @@ body{
 .serviceImg {
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
 .serviceImg img{
   width: 100%;
