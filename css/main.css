@@ -181,7 +181,7 @@ body{
   width: 110px;
 }
 
-.main-header.scroll-sticky{
+.main-header.scroll-sticky, .main-header.bg-toggle{
   position: fixed;
   background: var(--darkColorTr);
 }
