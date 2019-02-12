@@ -3,6 +3,8 @@
   --mainColor: #e5bb3d;
   --darkColor: rgb(100, 126, 153);
   --darkColorTr:  rgba(100, 126, 153, .95);
+  --alertColor: #681934;
+  --alertColorLight: #a32853;
 
   --gradient1:  rgba(55, 79, 105, 0.95);
   --gradient2:  rgba(100, 126, 153, .95);
@@ -23,44 +25,55 @@ html {
 
 body{
   font-family: 'Raleway', sans-serif;
+  position: relative;
 }
 
-/* //////////////// CLASES UTIL //////////////// */
+/* //////////////// ICONOS VERIFICACION //////////////// */
 
-.txt-sm{
-  font-size: var(--txt-small);
+.check::before, .cross::before{
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  line-height: .5;
 }
 
+.check:before {
+  content: "\2713";
+  color: var(--darkColor);
+}
+.cross::before{
+  content: "\2715";
+  color: var(--alertColorLight);
+
+}
 
 /* //////////////// BOTON //////////////// */
 
-.btn-outline-main{
-  color: white;
+.btn-outline-main, .btn-outline-bg{
+  color: var(--grisOscuro);
   text-transform: capitalize;
   font-weight: bold;
   border-color:var(--mainColor);
   padding: .5rem 2rem;
-
+  transition: .2s;
 }
 
-.btn-outline-main:hover{
+.btn-outline-bg{
+  color: var(--grisClaro);
+}
+
+.btn-outline-main:hover, .btn-outline-bg:hover{
   color: white;
   background: var(--mainColor) !important;
-}
-
-.acerca .btn-outline-main, .contacto .btn-outline-main{
-  color: var(--grisOscuro);
-}
-.acerca .btn-outline-main:hover, .contacto .btn-outline-main:hover{
-  color: white;
-  background: var(--mainColor);
 }
 
 /* //////////////// SECCION GENERICA //////////////// */
 
 .section {
   padding: 6em 0;
-  
+}
+
+.section:nth-child(odd){
+  background: var(--grisClaro);
 }
 
 .section-header{
@@ -178,21 +191,24 @@ body{
   transition: .5s;
 }
 
-.main-header .navbar-nav a:hover{
+.main-header .nav-link:hover{
+  color: var(--mainColor) !important;
+}
+
+.main-header .nav-link.active{
   color: var(--mainColor) !important;
 }
 
 .navbar-toggler:focus{
   border-color: var(--mainColor);
 }
+
 /* //////////////// FIN HEADER //////////////// */
 
 /* //////////////// HERO //////////////// */
 .hero {
   position: relative;
-  /* background-image: url(../images/hero.jpg); */
   background: url(../images/hero.jpg) no-repeat center center/cover;
-  /* background-size: cover; */
   height: 90vh;
 }
 
@@ -234,12 +250,11 @@ body{
 
 /* //////////////// FIN HERO //////////////// */
 
+
 /* //////////////// ABOUT //////////////// */
-.acerca, .contacto {
-  background: var(--grisClaro);
-}
 
 /* //////////////// FIN ABOUT //////////////// */
+
 
 /* //////////////// TEAM //////////////// */
 
@@ -253,6 +268,28 @@ body{
 }
 
 /* //////////////// FIN TEAM //////////////// */
+
+
+/* //////////////// PLANS //////////////// */
+
+.plan-icon{
+  color: var(--mainColor);
+  font-size: 4rem;
+}
+
+.plans .list-group-item {
+  text-align: center;
+  border:none;
+  background: var(--grisClaro);
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+
+/* ////////////////FIN PLANS //////////////// */
+
 
 /* //////////////// SERVICES //////////////// */
 .services {
@@ -276,6 +313,7 @@ body{
 }
 
 /* //////////////// FIN SERVICES //////////////// */
+
 
 /* //////////////// CONTACTO //////////////// */
 .contacto .info {
@@ -330,6 +368,5 @@ body{
   padding:0;
   margin-right: 40px;
 }
-
 
 /* //////////////// FIN FOOTER //////////////// */
